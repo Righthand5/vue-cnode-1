@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Axios from 'axios'
+import $ from 'jquery'
 
 Vue.prototype.$http = Axios
 Vue.config.productionTip = false
@@ -15,7 +16,7 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
-Vue.filter('farmaDate',function (str){
+Vue.filter('formaDate',function (str){
   if(!str) return ''
   var date = new Date(str)
   var time = new Date().getTime() - date.getTime()//现在时间-传入的时间

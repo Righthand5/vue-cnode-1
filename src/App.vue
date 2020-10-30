@@ -2,7 +2,8 @@
   <div id="app">
     <Header></Header>
     <div class="main">
-      <PostList></PostList>
+      <router-view name="slidebar"></router-view>
+      <router-view name="main"></router-view>
     </div>
   </div>
 </template>
@@ -19,5 +20,11 @@ export default {
 </script>
 
 <style>
-
+#app{
+  background-color: #e1e1e1;
+}
+.main{
+  width: 80%;
+  margin: 10px auto;
+}
 </style>
